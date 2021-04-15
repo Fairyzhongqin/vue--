@@ -1,0 +1,231 @@
+// table 表格
+.el-table {
+  border-radius: 8px;
+
+  th {
+    min-height: 50px;
+    padding: 7px 0;
+  }
+
+  td {
+    padding: 6px 0;
+  }
+
+  .cell {
+    .el-button {
+      height: 24px;
+      padding: 7px 10px;
+    }
+  }
+
+  .el-table__header {
+    width: 100% !important;
+    background: #E3EEF6;
+
+    thead {
+      .is-leaf {
+        background: #e3eef6;
+      }
+    }
+  }
+
+  .el-table__body {
+    width: 100% !important;
+    .current-row {
+      td {
+        background-color: #CEE4FF !important;
+      }
+    }
+  }
+}
+
+
+// 输入框组件
+.el-input>.el-input__inner {
+  height: 30px;
+  line-height: 30px;
+}
+
+//先行登记保存证据 start
+.el-input.item_index>.el-input__inner {
+  width: 86px;
+  height: 106px;
+}
+.marginFlex{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.marginFlex > .el-form-item__content{
+  margin: 0 !important;
+}
+//先行登记保存证据 end
+// // 
+// .item-is-left .el-tabs--left .el-tabs__item.is-left{
+//   text-align: left !important;
+// }
+// .item-is-left .el-tabs--left .el-tabs__active-bar.is-left, .el-tabs--left .el-tabs__nav-wrap.is-left::after{
+//   left: auto;
+// }
+
+.el-input__icon {
+  line-height: 30px;
+}
+
+
+.el-divider--horizontal {
+  margin: 8px 0;
+}
+
+// 对话框组件
+.el-dialog__body {
+  padding: 0;
+  // padding-bottom: 10px;
+  // height: 93%;
+}
+
+.el-dialog__wrapper {
+  .el-dialog__header {
+    padding: 15px 20px 10px;
+    border-bottom: 1px solid #E0E0E0;
+    // height: 2%;
+    .el-dialog__title {
+      line-height: 16px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .el-dialog__headerbtn {
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+    }
+  }
+
+  .el-dialog__footer {
+    height: 42px;
+    padding: 6px 16px;
+    border-top: 1px solid #E0E0E0;
+
+    .el-button {
+      padding: 7px 12px;
+    }
+  }
+}
+
+// 树形结构组件
+.el-tree {
+  background-color: #fff0;
+
+  .el-tree-node:focus>.el-tree-node__content {
+    background: #FFFFFF;
+  }
+  .el-tree-node__expand-icon {
+    padding: 0;
+    border: 1px solid #333333;
+    min-width: 13px;
+    min-height: 13px;
+    text-align: center;
+    line-height: 13px;
+    border-radius: 4px;
+    margin-right: 3px;
+    color: #333333;
+    &.is-leaf {
+      opacity: 0;
+    }
+  }
+  .el-icon-caret-right {
+    &::before {
+      content: "+";
+    }
+  }
+  .is-expanded {
+    .expanded {
+      transform: rotate(0);
+      &::before {
+        content: "-"
+      }
+    }
+    .is-leaf {
+      border-color: transparent;
+      color: transparent;
+    }
+  }
+}
+
+.el-button {
+  height: 30px;
+  line-height: 0;
+}
+
+.is-light {
+  border: none!important;
+  box-shadow: 0px 0px 8px 0px rgba(156,162,163,1);
+}
+
+// 一般行政处罚 流程子节点
+.penalty-nodes {
+  .timeline-large {
+    /deep/ .el-timeline-item__node {
+      border: 4px solid #b8eaff;
+      left: -5px;
+      top: -5px;
+      border-color: rgba(184,234,255, .5);
+      background-clip: padding-box;
+      // animation: hallow 10s linear both infinite;
+    }
+  }
+  .time-tail-active {
+    /deep/ .el-timeline-item__tail {
+      border-left: 2px solid rgb(0, 153, 255);
+    }
+  }
+  /deep/ .el-timeline-item__node--normal {
+    left: -1px;
+    top: -1px;
+  }
+  .time-tail {
+    /deep/ .el-timeline-item__tail {
+      border-left: 2px solid rgb(0, 153, 255);
+    }
+  }
+}
+
+// 小节点光晕动画
+/* @keyframes hallow {
+  0% {
+    border: 0px solid #b8eaff;
+    left: -1px;
+    top: -1px;
+  }
+  50% {
+    border: 4px solid #b8eaff;
+    left: -5px;
+    top: -5px;
+  }
+  100% {
+    border: 0px solid #b8eaff;
+    left: -1px;
+    top: -1px;
+  }
+} */
+
+//管理端 地图tooltip框样式
+.el-tooltip__popper{
+  .map_jsarea{
+    display: flex;
+    flex-direction: column;
+    .itemSpan {
+      margin: 5px 0;
+      >span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    .activeItem {
+      span {
+        color: salmon !important;
+      }
+    }
+  }
+}
